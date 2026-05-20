@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Dizajn Kancelarija j.d.o.o.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Manrope',sans-serif;
+    background:#f5f8ff;
+    color:#1f2c44;
+    overflow-x:hidden;
+    line-height:1.7;
+}
+
+img{
+    width:100%;
+    display:block;
+    object-fit:cover;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1280px;
+    margin:auto;
+}
+
+section{
+    padding:110px 0;
+}
+
+h2{
+    font-size:46px;
+    margin-bottom:24px;
+    text-align:center;
+    color:#183153;
+}
+
+.section-text{
+    max-width:860px;
+    margin:0 auto 60px;
+    text-align:center;
+    color:#5d6f8d;
+    font-size:18px;
+}
+
+/* NAVIGATION */
+
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:rgba(15,26,54,0.88);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.nav-container{
+    width:90%;
+    max-width:1280px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:800;
+    letter-spacing:0.3px;
+}
+
+.menu{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.menu a{
+    color:#fff;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.menu a:hover{
+    color:#ff9ed0;
+}
+
+/* HERO */
+
+header{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(17,31,65,0.82), rgba(22,38,80,0.82)),
+    url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=1800&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:120px 0 80px;
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.hero h1{
+    font-size:72px;
+    line-height:1.08;
+    margin-bottom:30px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:21px;
+    color:#dbe7ff;
+    margin-bottom:42px;
+}
+
+.btn{
+    display:inline-block;
+    padding:18px 36px;
+    background:linear-gradient(135deg,#ff8bc7,#7ca7ff);
+    color:#fff;
+    font-weight:700;
+    border-radius:12px;
+    transition:0.3s;
+    box-shadow:0 15px 35px rgba(0,0,0,0.18);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* GRID */
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(54,81,135,0.10);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card img{
+    height:240px;
+}
+
+.card-content{
+    padding:32px;
+}
+
+.card h3{
+    font-size:25px;
+    margin-bottom:14px;
+    color:#183153;
+}
+
+.card p{
+    color:#64748e;
+}
+
+/* ABOUT */
+
+.about{
+    background:#eef4ff;
+}
+
+.about-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    border-radius:16px;
+    height:540px;
+}
+
+.about-text h2{
+    text-align:left;
+}
+
+.about-text p{
+    margin-bottom:22px;
+    color:#586983;
+}
+
+/* PROCESS */
+
+.process-wrapper{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.process-box{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(52,78,131,0.08);
+}
+
+.process-number{
+    width:70px;
+    height:70px;
+    background:linear-gradient(135deg,#78a8ff,#ff93cb);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    font-size:28px;
+    font-weight:800;
+    margin-bottom:24px;
+}
+
+.process-box h3{
+    margin-bottom:14px;
+    color:#183153;
+    font-size:24px;
+}
+
+/* CTA */
+
+.cta{
+    background:
+    linear-gradient(rgba(25,38,78,0.86), rgba(25,38,78,0.86)),
+    url('https://images.unsplash.com/photo-1497366412874-3415097a27e7?q=80&w=1800&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    text-align:center;
+    padding:110px 40px;
+}
+
+.cta h2{
+    color:#fff;
+}
+
+.cta p{
+    max-width:800px;
+    margin:0 auto 36px;
+    color:#d9e6ff;
+    font-size:19px;
+}
+
+/* VALUES */
+
+.values{
+    background:#f7faff;
+}
+
+.values-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:28px;
+}
+
+.value-card{
+    background:#fff;
+    border-radius:12px;
+    padding:36px;
+    box-shadow:0 10px 25px rgba(49,76,125,0.08);
+}
+
+.value-card h3{
+    margin-bottom:14px;
+    color:#183153;
+}
+
+/* FAQ */
+
+.faq{
+    background:#eef4ff;
+}
+
+.faq-item{
+    background:#fff;
+    padding:34px;
+    margin-bottom:22px;
+    border-radius:12px;
+    box-shadow:0 10px 24px rgba(46,72,124,0.08);
+}
+
+.faq-item h3{
+    margin-bottom:12px;
+    color:#183153;
+}
+
+/* CONTACT */
+
+.contact-wrapper{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    margin-top:50px;
+}
+
+.contact-box{
+    background:#fff;
+    padding:40px;
+    border-radius:14px;
+    box-shadow:0 10px 28px rgba(50,76,126,0.08);
+}
+
+.contact-box h3{
+    margin-bottom:18px;
+    color:#183153;
+    font-size:28px;
+}
+
+.contact-box p{
+    color:#61718d;
+    margin-bottom:16px;
+}
+
+.contact-box img{
+    border-radius:12px;
+    margin-top:24px;
+    height:260px;
+}
+
+/* FORM */
+
+.form-section{
+    background:#eef4ff;
+}
+
+form{
+    max-width:900px;
+    margin:0 auto;
+    background:#fff;
+    padding:50px;
+    border-radius:16px;
+    box-shadow:0 12px 32px rgba(45,72,123,0.08);
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.form-group{
+    margin-bottom:24px;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:18px;
+    border:1px solid #d5ddf0;
+    border-radius:10px;
+    font-size:15px;
+    font-family:'Manrope',sans-serif;
+}
+
+textarea{
+    min-height:180px;
+    resize:none;
+}
+
+.error{
+    color:#d62f45;
+    font-size:14px;
+    margin-top:8px;
+    display:none;
+}
+
+.success-message{
+    display:none;
+    margin-top:20px;
+    background:#dff6e6;
+    color:#1e7f46;
+    padding:16px;
+    border-radius:10px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+    background:#121f3f;
+    color:#fff;
+    text-align:center;
+    padding:45px 0;
+}
+
+footer p{
+    color:#d8e2ff;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:980px){
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .about-wrapper,
+    .contact-wrapper,
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .menu{
+        justify-content:center;
+    }
+
+    .nav-container{
+        flex-direction:column;
+        gap:16px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    h2{
+        font-size:36px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    section{
+        padding:90px 0;
+    }
+
+    form{
+        padding:35px 24px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <div class="logo">
+            Dizajn Kancelarija j.d.o.o.
+        </div>
+
+        <div class="menu">
+            <a href="#onama">O nama</a>
+            <a href="#usluge">Usluge</a>
+            <a href="#proces">Proces rada</a>
+            <a href="#prednosti">Prednosti</a>
+            <a href="#vrijednosti">Vrijednosti</a>
+            <a href="#faq">FAQ</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- HERO -->
+
+<header>
+
+    <div class="hero-content container">
+
+        <h1>
+            Profesionalna digitalna rješenja za moderan rast poslovanja
+        </h1>
+
+        <p>
+            Dizajn Kancelarija j.d.o.o. pruža napredne usluge marketinga,
+            SEO optimizacije, dizajna, brandinga, tehničkog savjetovanja
+            i IT podrške za kompanije koje žele stabilan razvoj i snažnu online prisutnost.
+        </p>
+
+        <a href="#kontakt" class="btn">
+            Zatražite konzultacije
+        </a>
+
+    </div>
+
+</header>
+
+<!-- ABOUT -->
+
+<section id="onama" class="about">
+
+    <div class="container">
+
+        <div class="about-wrapper">
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1600&auto=format&fit=crop" alt="">
+            </div>
+
+            <div class="about-text">
+
+                <h2>O našoj kompaniji</h2>
+
+                <p>
+                    Dizajn Kancelarija j.d.o.o. razvija moderna poslovna i digitalna rješenja
+                    prilagođena potrebama suvremenog tržišta. Fokusirani smo na kvalitetu,
+                    dugoročnu suradnju i profesionalan pristup svakom projektu.
+                </p>
+
+                <p>
+                    Kombiniramo kreativni dizajn, tehničko znanje i marketinšku strategiju
+                    kako bismo pomogli klijentima ostvariti bolje rezultate i snažniji identitet.
+                </p>
+
+                <p>
+                    Naš cilj je unaprijediti poslovanje klijenata kroz pouzdana rješenja,
+                    transparentnu komunikaciju i kontinuiranu podršku.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="usluge">
+
+    <div class="container">
+
+        <h2>Naše usluge</h2>
+
+        <p class="section-text">
+            Nudimo širok raspon profesionalnih usluga za digitalni razvoj,
+            optimizaciju poslovanja i jačanje prisutnosti na tržištu.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1600&auto=format&fit=crop" alt="">
+
+                <div class="card-content">
+
+                    <h3>Digitalni marketing</h3>
+
+                    <p>
+                        Kreiramo učinkovite marketinške kampanje koje povećavaju
+                        prepoznatljivost brenda i privlače nove klijente.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1600&auto=format&fit=crop" alt="">
+
+                <div class="card-content">
+
+                    <h3>SEO optimizacija</h3>
+
+                    <p>
+                        Optimiziramo sadržaj i strukturu web stranica za bolje
+                        rezultate na tražilicama i veću organsku posjećenost.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://cdn.pixabay.com/photo/2017/06/29/22/29/branding-2456457_1280.jpg" alt="">
+
+                <div class="card-content">
+
+                    <h3>Branding</h3>
+
+                    <p>
+                        Razvijamo profesionalni vizualni identitet koji gradi
+                        povjerenje i razlikuje vašu kompaniju od konkurencije.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://cdn.pixabay.com/photo/2017/10/10/21/47/laptop-2838921_1280.jpg" alt="">
+
+                <div class="card-content">
+
+                    <h3>Grafički dizajn</h3>
+
+                    <p>
+                        Izrađujemo moderan i estetski dizajn za prezentacije,
+                        promotivne materijale i digitalne platforme.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://cdn.pixabay.com/photo/2017/07/31/11/09/computer-2557299_1280.jpg" alt="">
+
+                <div class="card-content">
+
+                    <h3>Tehničko savjetovanje</h3>
+
+                    <p>
+                        Pomažemo kompanijama u optimizaciji procesa,
+                        digitalnoj transformaciji i tehničkom planiranju.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img src="https://cdn.pixabay.com/photo/2015/09/05/20/02/coding-924920_1280.jpg" alt="">
+
+                <div class="card-content">
+
+                    <h3>IT podrška</h3>
+
+                    <p>
+                        Osiguravamo stabilnu tehničku podršku, održavanje sustava
+                        i pomoć pri svakodnevnim IT izazovima.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section id="proces">
+
+    <div class="container">
+
+        <h2>Kako radimo</h2>
+
+        <p class="section-text">
+            Strukturiran proces omogućuje učinkovitu suradnju i kvalitetnu realizaciju projekata.
+        </p>
+
+        <div class="process-wrapper">
+
+            <div class="process-box">
+
+                <div class="process-number">01</div>
+
+                <h3>Analiza potreba</h3>
+
+                <p>
+                    Upoznajemo vaše poslovanje, ciljeve i izazove kako bismo definirali optimalan smjer razvoja.
+                </p>
+
+            </div>
+
+            <div class="process-box">
+
+                <div class="process-number">02</div>
+
+                <h3>Razvoj strategije</h3>
+
+                <p>
+                    Kreiramo detaljan plan aktivnosti prilagođen vašim potrebama i tržišnim zahtjevima.
+                </p>
+
+            </div>
+
+            <div class="process-box">
+
+                <div class="process-number">03</div>
+
+                <h3>Implementacija</h3>
+
+                <p>
+                    Pokrećemo dogovorene aktivnosti i primjenjujemo moderna digitalna i tehnička rješenja.
+                </p>
+
+            </div>
+
+            <div class="process-box">
+
+                <div class="process-number">04</div>
+
+                <h3>Praćenje rezultata</h3>
+
+                <p>
+                    Kontinuirano analiziramo rezultate i unapređujemo procese za maksimalnu učinkovitost.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Vrijeme je za profesionalnu digitalnu transformaciju
+        </h2>
+
+        <p>
+            Povećajte vidljivost, unaprijedite poslovne procese i izgradite snažan identitet
+            uz podršku stručnog tima Dizajn Kancelarija j.d.o.o.
+        </p>
+
+        <a href="#kontakt" class="btn">
+            Kontaktirajte nas
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ADVANTAGES -->
+
+<section id="prednosti">
+
+    <div class="container">
+
+        <h2>Zašto klijenti biraju nas</h2>
+
+        <p class="section-text">
+            Kombiniramo iskustvo, kreativnost i tehničko znanje kako bismo pružili kvalitetna rješenja.
+        </p>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <h3>Individualni pristup</h3>
+
+                <p>
+                    Svakom projektu pristupamo detaljno i prilagođavamo strategiju stvarnim potrebama klijenta.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Moderne tehnologije</h3>
+
+                <p>
+                    Koristimo suvremene alate i digitalna rješenja za stabilan razvoj poslovanja.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Transparentna komunikacija</h3>
+
+                <p>
+                    Tijekom suradnje osiguravamo jasnu komunikaciju i redovite informacije o napretku.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Dugoročna podrška</h3>
+
+                <p>
+                    Naš tim ostaje dostupan i nakon završetka projekta radi daljnjeg razvoja i podrške.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+
+<section id="vrijednosti" class="values">
+
+    <div class="container">
+
+        <h2>Naše vrijednosti</h2>
+
+        <p class="section-text">
+            Profesionalnost, odgovornost i kvaliteta predstavljaju temelj našeg rada.
+        </p>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <h3>Povjerenje</h3>
+
+                <p>
+                    Dugoročne odnose gradimo kroz pošten pristup i kvalitetnu suradnju.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Inovativnost</h3>
+
+                <p>
+                    Neprestano pratimo trendove i implementiramo moderna digitalna rješenja.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Kvaliteta usluge</h3>
+
+                <p>
+                    Fokusirani smo na detalje i visok standard izvedbe svakog projekta.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <h3>Profesionalni razvoj</h3>
+
+                <p>
+                    Kontinuirano unapređujemo znanje i prilagođavamo se novim poslovnim izazovima.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FAQ -->
+
+<section id="faq" class="faq">
+
+    <div class="container">
+
+        <h2>Često postavljena pitanja</h2>
+
+        <p class="section-text">
+            Najvažnije informacije o našim uslugama i načinu suradnje.
+        </p>
+
+        <div class="faq-item">
+
+            <h3>Koje vrste kompanija podržavate?</h3>
+
+            <p>
+                Surađujemo s malim i srednjim tvrtkama, kao i organizacijama koje žele unaprijediti digitalnu prisutnost.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Nudite li kontinuiranu IT podršku?</h3>
+
+            <p>
+                Da, pružamo dugoročnu tehničku podršku i održavanje prema potrebama klijenta.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Koliko traje implementacija projekta?</h3>
+
+            <p>
+                Trajanje projekta ovisi o složenosti zadatka i definiranim poslovnim ciljevima.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Kako možemo započeti suradnju?</h3>
+
+            <p>
+                Dovoljno je poslati upit putem kontakt forme i naš tim će vam odgovoriti u najkraćem roku.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="kontakt">
+
+    <div class="container">
+
+        <h2>Kontakt informacije</h2>
+
+        <p class="section-text">
+            Kontaktirajte nas za dodatne informacije, savjetovanje ili poslovnu suradnju.
+        </p>
+
+        <div class="contact-wrapper">
+
+            <div class="contact-box">
+
+                <h3>Adresa ureda</h3>
+
+                <p>
+                    Splitska ulica 21<br>
+                    21230, Sinj<br>
+                    Splitsko-dalmatinska zupanija
+                </p>
+
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop" alt="">
+
+            </div>
+
+            <div class="contact-box">
+
+                <h3>Email kontakt</h3>
+
+                <p>
+                    support@dizajnkancelarija.com
+                </p>
+
+                <p>
+                    Naš tim odgovara na poslovne upite, zahtjeve za suradnju
+                    i tehnička pitanja u najkraćem mogućem roku.
+                </p>
+
+                <img src="https://images.pexels.com/photos/36175215/pexels-photo-36175215.jpeg" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FORM -->
+
+<section class="form-section">
+
+    <div class="container">
+
+        <h2>Pošaljite upit</h2>
+
+        <p class="section-text">
+            Ispunite kontakt formu i javit ćemo vam se što je prije moguće.
+        </p>
+
+        <form id="contactForm">
+
+            <div class="form-row">
+
+                <div class="form-group">
+
+                    <input type="text" id="name" placeholder="Ime i prezime">
+
+                    <div class="error" id="nameError">
+                        Molimo unesite ime i prezime.
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="email" id="email" placeholder="Email adresa">
+
+                    <div class="error" id="emailError">
+                        Molimo unesite ispravnu email adresu.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="form-group">
+
+                <textarea id="message" placeholder="Vaša poruka"></textarea>
+
+                <div class="error" id="messageError">
+                    Molimo unesite poruku.
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn">
+                Pošalji poruku
+            </button>
+
+            <div class="success-message" id="successMessage">
+                Vaša poruka je uspješno zaprimljena. Hvala na kontaktu!
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            © 2026 Dizajn Kancelarija j.d.o.o. — Sva prava pridržana.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+const form = document.getElementById('contactForm');
+
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    let valid = true;
+
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const message = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    const successMessage = document.getElementById('successMessage');
+
+    nameError.style.display = 'none';
+    emailError.style.display = 'none';
+    messageError.style.display = 'none';
+    successMessage.style.display = 'none';
+
+    if(name.value.trim() === ''){
+        nameError.style.display = 'block';
+        valid = false;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/i;
+
+    if(!email.value.match(emailPattern)){
+        emailError.style.display = 'block';
+        valid = false;
+    }
+
+    if(message.value.trim() === ''){
+        messageError.style.display = 'block';
+        valid = false;
+    }
+
+    if(valid){
+
+        successMessage.style.display = 'block';
+
+        form.reset();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
